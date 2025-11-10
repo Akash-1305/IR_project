@@ -48,7 +48,6 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100">
-      {/* Header */}
       <header className="bg-gray-800/80 backdrop-blur border-b border-gray-700 shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
@@ -65,7 +64,6 @@ function App() {
         </div>
       </header>
 
-      {/* Scrollable Chat Area */}
       <div className="flex-1 overflow-y-auto pb-32">
         <div className="max-w-4xl mx-auto">
           {messages.length === 0 ? (
@@ -95,7 +93,6 @@ function App() {
         </div>
       </div>
 
-      {/* Error Message */}
       {error && (
         <div className="max-w-4xl mx-auto px-4 py-2">
           <div className="bg-red-900/40 border border-red-700 rounded-lg p-4 flex items-start gap-3">
@@ -108,8 +105,7 @@ function App() {
         </div>
       )}
 
-      {/* Fixed Input at Bottom */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gray-800/80 backdrop-blur border-t border-gray-700">
+      <div className="fixed bottom-0 left-0 right-0">
         <div className="max-w-4xl mx-auto">
           <ChatInput onSend={handleSendMessage} disabled={isLoading} />
         </div>
